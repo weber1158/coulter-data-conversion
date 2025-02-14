@@ -13,7 +13,7 @@ It can be a pain to manually combine the data from each file into a single sprea
 2. Copy the folder containing the `.#m4.XLS` files onto a flash drive and then save the folder somewhere on your PC.
 3. Make a copy of the `XLStoCSV.ps1` file and paste it in the same folder as the Coulter Counter data.
 4. Right-click the `XLStoCSV.ps1` file in the folder and click <kbd>Edit</kbd>. This should open the PowerShell ISE.
-    - If the PowerShell ISE does not open by this method, open it manually by using the <kbd>&#8862; Win</kbd> + <kbd>R</kbd> keyboard shortcut and typing `powershell` into the Run application. Then, type the following command in the PowerShell console to change the directory to the correct folder:
+    - If the PowerShell ISE does not open by this method, open it manually by using the <kbd>&#8862; Win</kbd> + <kbd>R</kbd> keyboard shortcut and typing `powershell_ise` into the Run application. Then, type the following command in the PowerShell console to change the directory to the correct folder:
   
 ```powershell
 Set-Location "<path>"
