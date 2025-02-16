@@ -1,0 +1,34 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h1 id="converting-beckman-multisizer-xls-files-to-csv">Converting Beckman Multisizer4 files to <code>.csv</code></h1>
+
+<h2 id="step-1-save-everything-to-a-flash-drive">Step 1. Save everything on a flash drive</h2>
+<p>Make copies of each <code>.#m4.XLS</code> file as well as a copy of <code>XLStoCSV.ps1</code> and save everything on a flash drive. </p>
+
+<h2 id="step-2-move-the-files-to-your-personal-computer">Step 2. Move the files to your personal computer</h2>
+<p>Ideally, your personal computer runs on Windows 10 with PowerShell 5.1 or later installed. </p>
+<p>Move the files from the flash drive onto your personal computer, and make sure they are all in the same folder.</p>
+<p>You will need to copy the path of the folder. For example:</p>
+<pre><code>C:<span class="hljs-symbol">\J</span>oeShmith<span class="hljs-symbol">\D</span>ata\<span class="hljs-symbol">Folder</span>\
+</code></pre><h2 id="step-3-open-powershell">Step 3. Open PowerShell</h2>
+<p>Use the keyboard shortcut <kbd>&#8862; Win</kbd> + <kbd>R</kbd> to open the <code>Run</code> app.</p>
+<p>In the <code>Run</code> app, type <code>powershell_ise</code> and hit enter.</p>
+<p>This will launch the PowerShell Integrated Scripting Environment (ISE).</p>
+<h2 id="step-3-navigate-to-the-correct-folder">Step 3. Navigate to the correct folder</h2>
+<p>In the PowerShell ISE, type:</p>
+<pre><code class="lang-powershell">Set-<span class="hljs-keyword">Location</span> <span class="hljs-title">"&lt;path</span>&gt;<span class="hljs-string">"</span>
+</code></pre>
+<p>where <code>&lt;path&gt;</code> is the name of the file path that you copied in Step 2. </p>
+<p>For example:</p>
+<pre><code class="lang-powershell">Set-Location "C:<span class="hljs-symbol">\U</span>sers<span class="hljs-symbol">\J</span>oeSmith<span class="hljs-symbol">\D</span>ata<span class="hljs-symbol">\F</span>older\"</span>
+</code></pre>
+<p>Once you are finished, press <kbd>Enter</kbd>. This will change the the PowerShell directory to the appropriate folder.</p>
+
+<h2 id="step-4-execute-the-xls2csv-ps1-function">Step 4. Execute the <code>XLS2CSV.ps1</code> function</h2>
+<p>In the PowerShell ISE console, execute the following command:</p>
+<pre><code class="lang-powershell">PowerShell -ExecutionPolicy Bypass -<span class="hljs-built_in">File</span> .\XLStoCSV.ps1
+</code></pre>
+<p>You need to press <kbd>Enter</kbd> when you're finished, otherwise the command won't execute. It may take a while for the script to run, depending on how many files are in the folder, but it will tell you when it is completed. </p>
+<p>The final results will be saved in a new folder called <code>CSV_Files</code>. In this folder, there will be a file called <code>all_data.csv</code> that contains all of the Coulter Counter data in a single spreadsheet.</p>
+</body></html>
